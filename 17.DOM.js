@@ -1,5 +1,5 @@
 //VAMOS A ACCEDER AL BODY 
-console.log(document.body)
+//console.log(document.body)
 
 //VAMOS A CREAR ETIQUETAS DESDE JS 
 
@@ -26,13 +26,16 @@ caja3.style.backgroundColor = 'yellow'
 
 
 //RENDERIZANDO NUESTRO ELEMENTO 
-
+/*
  document.body.appendChild(caja)
  document.body.appendChild(caja3)
  document.body.appendChild(caja2)
- 
+ */
 
-//document.body.append(caja,caja2)
+ function agregar(){
+    document.body.append(caja,caja2, caja3)
+ }
+ document.body.append(caja,caja2, caja3)
 
 //DIFERENCIAS ENTRE APPEND Y APPENDCHILD 
 
@@ -46,34 +49,38 @@ caja3.style.backgroundColor = 'yellow'
 //console.log(document.characterSet)
 
 //CUANTOS HIJOS TIENE EL DOCUMENTO  
-/*
-console.log(document.childElementCount)
+
+//console.log(document.body.childElementCount)
 
 //NODOS HIJOS DEL DOCUMENTO  
 
-console.log(document.childNodes)
+//console.log(document.body.childNodes)
 
 //PARA DEVOLVERNOS LOS HIJOS QUE TIENE 
 
-console.log(document.children)
+//console.log(document.head.children[2])
 
 //CLONAR EL DOCUMENTO  
 //se le pase un boolean true o false en función 
 //de si queremos que nos clone también el contenido 
 
-let clonadoBody=document.body.cloneNode(true)
+//let clonadoBody=document.body.cloneNode(true)
 
-console.log(clonadoBody)
+//console.log(clonadoBody)
 
 //COMO SABER EL TIPO DE CONTENIDO 
 
-console.log(document.contentType)
+//console.log(document.contentType)
 
 //CREANDO ATRIBUTOS 
 
 let subtitulo=document.querySelector('#sub1')
+console.log(subtitulo)
+subtitulo.innerHTML = "Hola mundo"
+
 
 subtitulo.setAttribute('class','tituloClase')
+
 
 //SELECCIONAR ELEMENTOS  
 let subtitulo2=document.querySelector('#sub2')
@@ -85,10 +92,12 @@ subtitulo3.style.color='green'
 subtitulo3.textContent='AHORA CAMBIO'
 
 
+
 //CREANDO UN COMENTARIO  
 
 let comentario=document.createComment('soy un comentario')
 console.log(comentario)
+
 
 //FRAGMENT  
 
@@ -107,18 +116,26 @@ console.log(document.doctype)
 //NOS DA EL ELEMENTO HTML  
 console.log(document.documentElement)
 
+
 //URI 
 console.log(document.documentURI)
 
+
 //SABER EL DOMAIN O DOMINIO 
 console.log(document.domain)
+
+
 //PRIMER HIJO 
 console.log(document.firstChild)
 
+
 //PRIMER ELEMENTO HIJO 
+
 
 console.log(document.firstElementChild)
 
+
+/*
 //QUERYSELECTORALL 
 
 const enlaces=[...document.querySelectorAll('a')]
